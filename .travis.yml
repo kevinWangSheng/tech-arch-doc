@@ -17,9 +17,24 @@ branches:
 env:
   global:
     - GITHUB_REPO: github.com/kevinWangSheng/tech-arch-doc.git
+    - GH_REF: github.com/kevinWangSheng/tech-arch-doc.git
 
 before_install:
   - export TZ=Asia/Shanghai
+  - chmod +x _travis.sh
 
 script:
   - vuepress build
+  - hexo clean && hexo g
+
+after_success:
+
+# 没有这个文件？有才见了鬼，这个文件我们待会手写!
+after_script:
+  - ./_travis.sh
+
+# E: Build LifeCycle
+
+# 选择进行操作的分支，即 Tarvis 需要监测和处理的分支，也可以使用黑白名单，用法请自行Google
+
+
