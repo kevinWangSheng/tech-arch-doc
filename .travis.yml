@@ -12,11 +12,11 @@ cache:
 
 branches:
   only:
-    - master
+    - hexo
 
 env:
   global:
-    - GITHUB_REPO: github.com/realpdai/tech-arch-doc.git
+    - GITHUB_REPO: github.com/kevinWangSheng/tech-arch-doc.git
 
 before_install:
   - export TZ=Asia/Shanghai
