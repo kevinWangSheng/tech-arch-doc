@@ -8,7 +8,7 @@ features:
   details: 不积跬步无以至千里, 仰望星空还需脚踏实地
 - title: 什么是思考——不知道
   details: 多数人为了逃避真正的思考愿意做任何事情————王兴
-- title: 全栈开发
-  details: 以Java开发为背景，全栈开发，DevOps
+- title: 个人的一点思考
+  details: 记录个人成长、技术、思考等
   footer: © 2023-present kevin
 ---

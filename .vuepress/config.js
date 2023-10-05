@@ -12,8 +12,8 @@ module.exports = {
     locales: {
         "/": {
             lang: "zh-CN",
-            title: "Java 全栈知识体系",
-            description: "包含: Java 基础, Java 部分源码, JVM, Spring, Spring Boot, Spring Cloud, 数据库原理, MySQL, ElasticSearch, MongoDB, Docker, k8s, CI&CD, Linux, DevOps, 分布式, 中间件, 开发工具, Git, IDE, 源码阅读，读书笔记, 开源项目..."
+            title: "Kevin随想录",
+            description: "包含: 做人 , 投资, 人生陷阱, 思考, 技术, 股权, 管理, 经济, 运行规律, 底层原理, 教育..."
         }
     },
     head: [
@@ -21,8 +21,8 @@ module.exports = {
         ["link", {rel: "icon", href: `/favicon.ico`}],
         // meta
         ["meta", {name: "robots", content: "all"}],
-        ["meta", {name: "author", content: "pdai"}],
-        ["meta", {name: "keywords", content: "Java 全栈知识体系, java体系, java知识体系, java框架,java详解,java学习路线,java spring, java面试, 知识体系, java技术体系, java编程, java编程指南,java开发体系, java开发,java教程,java,java数据结构, 算法, 开发基础"}],
+        ["meta", {name: "author", content: "kevin"}],
+        ["meta", {name: "keywords", content: "做自己, 投资, 思考,技术"}],
         ["meta", {name: "apple-mobile-web-app-capable", content: "yes"}]
     ],
     plugins: [
@@ -39,7 +39,7 @@ module.exports = {
             // set `platform` rather than `api`
             platform: 'github',
             // all other options of Vssue are allowed
-            owner: 'realpdai',
+            owner: 'kevin',
             repo: 'tech-arch-doc-comments',
             clientId: 'xxxxxxxxxxx',
             clientSecret: 'xxxxxxxxxxxxxxxxxxxxxx',
@@ -65,8 +65,8 @@ module.exports = {
     ],
     themeConfig: {
         // repo: "realpdai/tech-arch-doc",
-        docsRepo: "realpdai/tech-arch-doc",
-        // logo: "/logo.png",
+        docsRepo: "kevinWangSheng/tech-arch-doc",
+        // logo: "/images/logo.png",
         editLinks: true,
         sidebarDepth:0,
         locales: {
@@ -77,12 +77,18 @@ module.exports = {
                 lastUpdated: "上次更新",
                 nav: [
                     {
+                        text: '投资', link: '/md/invest/basic/wine.md'
+                    },
+                    {
                         text: '关于', link: '/md/about/me/about-me.md'
+
                     }
                 ],
                 sidebar: {
-                    "/md/about/": genSidebar4About()
-                }
+                    "/md/about/": genSidebar4About(),
+                    "/md/invest/": genSidebar4Invest()
+                },
+
             }
         }
     }
@@ -112,6 +118,21 @@ function genSidebar4About(){
                 "blog/blog-build-ci.md",
                 "blog/blog-build-cd.md",
                 "blog/blog-build-ssl.md"
+            ]
+        }
+    ];
+}
+
+function genSidebar4Invest(){
+    return [
+        {
+            title: "投资",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "basic/whatIsInverst.md",
+                "basic/inverstMyself.md",
+                "basic/aboutInverst.md"
             ]
         }
     ];

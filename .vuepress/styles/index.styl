@@ -1,4 +1,4 @@
-.custom-page-class{
+.custom-page-class {
   /* 自定义的样式 */
 }
 
@@ -30,19 +30,47 @@ h2
   .custom-block-title
     font-weight 600
     margin-bottom -0.4rem
+
   &.tip, &.warning, &.danger
     padding .1rem 1.5rem
     border-left-width .5rem
     border-left-style solid
     margin 1rem 0
+
   &.tip
     background-color #dfefff
     border-color #428eb9
 
 // logo
-.navbar
-  .logo
-    height $navbarHeight - 1.6rem
-    min-width $navbarHeight - 1.6rem
-    margin-right 0rem
-    vertical-align top
+//.navbar
+//  .logo
+//    height $navbarHeight - 1.6rem
+//    min-width $navbarHeight - 1.6rem
+//    margin-right 0.8rem
+//    vertical-align top
+
+//.navbar .logo {
+//  margin-right: auto !important;
+//  order: -1; /* 负值使其排在最左侧 */
+//}
+
+
+.navbar {
+  display: flex;
+  justify-content: flex-end; // 从右边开始放置元素
+  order: 1; // 将标志放在最左侧
+  margin-left: auto; // 将剩余的空间放在标志的右侧
+}
+
+.navbar .nav-links {
+  display: flex;
+  order: 1;
+  // 如果有需要，您可以增加或减少这里的间距
+  margin-right: 20px;
+}
+
+.navbar .search-box {
+  order: 2
+  flex-shrink: 0; // 防止搜索框在窄屏幕上收缩
+}
+
