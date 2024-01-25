@@ -238,4 +238,4 @@ public class TaskComponent {
 
 ```
 
-![img_1.png](../../../docs/images/img_1.png)
+![img_10.png](../../../assert/images/img_10.png)

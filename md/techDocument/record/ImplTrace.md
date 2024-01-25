@@ -19,7 +19,7 @@
 
 从底层来看的话就是：
 
-![img.png](../../../docs/images/img.png)
+![img_2.png](../../../assert/images/img_2.png)
 所以他的put get remove clear都是基于底层的ThreadLocal进行的操作，所以这里是基于每一个线程id进行对应的管理的。
 
 首先我们先来看一下单台服务器的实现
@@ -138,13 +138,12 @@ public Result helloworld(){
 ```
 
 结果输入如下
-
-![img_1.png](../../../docs/images/img_1.png)
+![img_3.png](../../../assert/images/img_3.png)
 ## 解决异步问题
 
 按照上面我们随便编写一个服务，然后进行异步调用，比如使用@Async
 
-![img_2.png](../../../docs/images/img_2.png)
+![img_4.png](../../../assert/images/img_4.png)
 ```java
 @Service
 public class TraceServiceImpl implements TraceService {
@@ -159,8 +158,7 @@ public class TraceServiceImpl implements TraceService {
 
 就会发现这个由主线程创建的异步子线程的traceId为空：
 
-![img_3.png](../../../docs/images/img_3.png)
-
+![img_5.png](../../../assert/images/img_5.png)
 
 这个是因为主线程在创建子线程的时候，上下文中的值没有传递过去，我们所要解决的就是在这个线程创建执行的时候顺便把主线程的traceId塞到子线程中
 
@@ -172,7 +170,7 @@ public class TraceServiceImpl implements TraceService {
 
 如下：
 
-![img_4.png](../../../docs/images/img_4.png)
+![img_7.png](../../../assert/images/img_7.png)
 可以看到这里他需要返回一个Executor，所以我们可以设置自己的ThreadFactory
 
 如下
@@ -241,8 +239,7 @@ public class TraceRunnable implements Runnable{
 
 最终结果如下：结果一样了
 
-![img_5.png](../../../docs/images/img_5.png)
-
+![img.png](../../../assert/images/img.png)
 ## 处理消息MQ
 
 在发送MQ的时候，因为发送消息他设计Channel的发送，所以是不同线程的，这里我们需要在他发送前后进行处理

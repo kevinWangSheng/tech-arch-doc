@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /images/index-read.png
-actionText: start
+actionText: 原神,启动!
 actionLink: /md/techDocument/record/ImplTrace.md
 features:
 - title: 夯实基础
