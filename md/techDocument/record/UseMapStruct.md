@@ -1,0 +1,3 @@
+# MapStruct的使用
+
+MapStruct是一个VO/DTO/PO等对象的字段之间值的转换的一个工具，他是一个效率比较高的，相对于Apache的common以及Spring等的BeanUtils通过反射的方式去转换的，他这个效率相当于自己手写get/set，不需要在运行时去获取，编译时就可以自己生成，所以效率跟手写一样，但是手写

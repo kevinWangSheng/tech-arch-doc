@@ -82,11 +82,14 @@ module.exports = {
                     {
                         text: '关于', link: '/md/about/me/about-me.md'
 
+                    },{
+                        text: "技术记录",link: '/md/techDocument/record/ImplTrace.md'
                     }
                 ],
                 sidebar: {
                     "/md/about/": genSidebar4About(),
-                    "/md/invest/": genSidebar4Invest()
+                    "/md/invest/": genSidebar4Invest(),
+                    "/md/techDocument/": genSidebar4Tech()
                 },
 
             }
@@ -133,6 +136,22 @@ function genSidebar4Invest(){
                 "basic/whatIsInverst.md",
                 "basic/inverstMyself.md",
                 "basic/aboutInverst.md"
+            ]
+        }
+    ];
+}
+
+function genSidebar4Tech(){
+    return [
+        {
+            title: "技术记录",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "record/ImplTrace.md",
+                "record/inventory.md",
+                "record/UseMapStruct.md",
+                "record/DistributeSchedule.md"
             ]
         }
     ];

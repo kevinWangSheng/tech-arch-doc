@@ -1,8 +1,8 @@
 ---
 home: true
 heroImage: /images/index-read.png
-actionText: 生存六法则 →
-actionLink: /md/think/basic/think.md
+actionText: start
+actionLink: /md/techDocument/record/ImplTrace.md
 features:
 - title: 夯实基础
   details: 不积跬步无以至千里, 仰望星空还需脚踏实地
