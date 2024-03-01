@@ -151,7 +151,11 @@ function genSidebar4Tech(){
                 "record/ImplTrace.md",
                 "record/inventory.md",
                 "record/UseMapStruct.md",
-                "record/DistributeSchedule.md"
+                "record/DistributeSchedule.md",
+                "record/RedisBigKey.md",
+                "record/RedisHotKey.md",
+                "record/GCRecord.md",
+                "record/RedisLock.md"
             ]
         }
     ];
